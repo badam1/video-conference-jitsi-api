@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head th:replace="/fragments/header-fragment :: head"></head>
+    <!--/*@thymesVar id="signalingServerUrl" type="java.lang.String"*/-->
+    <!--/*@thymesVar id="room" type="java.lang.String"*/-->
+
+    <body>
+        <div class="container-fluid">
+            <h1 class="text-center">Video Conference POC</h1>
+            <div class="row">
+                <div id="urlAndForm" class="col-md-3">
+                    <form th:action="@{/video-conference/index}" method="post">
+                        <label for="roomName">Room name:</label>
+                        <input autofocus="autofocus" name="roomName" type="text" id="roomName"
+                               class="form-control input-block"/>
+                        <br/>
+                        <button type="submit" id="createRoomBtn" class="btn btn-success btn-sm">Enter room</button>
+                    </form>
+                </div>
+                <div id="meet" class="col-md-6"></div>
+            </div>
+        </div>
+        <input type="hidden" id="signalingServerUrl" th:value="${signalingServerUrl}"/>
+        <input type="hidden" id="room" th:value="${room}"/>
+    </body>
+</html>
