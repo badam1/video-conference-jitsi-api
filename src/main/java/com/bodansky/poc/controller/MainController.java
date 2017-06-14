@@ -39,7 +39,7 @@ public class MainController {
         return "redirect:/video-conference/" + roomName;
     }
 
-    @GetMapping("/index/{room}")
+    @GetMapping("/{room}")
     public String getChatRoom(@PathVariable("room") String room, Model model) {
         log.info("getChatRoom() - {}", room);
         model.addAttribute("room", room);
