@@ -36,7 +36,7 @@ public class MainController {
     @PostMapping("/index")
     public String getRoomName(@PathParam("roomName") String roomName) {
         log.info("getRoomName() {}", roomName);
-        return "redirect:/video-conference/index/" + roomName;
+        return "redirect:/video-conference/" + roomName;
     }
 
     @GetMapping("/index/{room}")
