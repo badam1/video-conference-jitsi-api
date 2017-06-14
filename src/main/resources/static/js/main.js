@@ -23,12 +23,20 @@ $(function () {
         $("#urlAndForm").append(
             "<h4>Access url for room: " + room + "</h4> " +
             "<input readonly='readonly' class='input form-control input-block' type='text' value='" + window.location + "'/>");
-        $body.append("<a href='/video-conference/index' class='btn btn-warning right-corner'><i class='fa fa-sign-out'>Leave room</i></a>")
+        $body.append("<a id='leaveRoom' href='/video-conference/index' class='btn btn-warning right-corner'><i class='fa fa-sign-out'>Leave room</i></a>")
     }
 
     $("#createRoomBtn").on("click", function () {
         var roomName = $("#roomName").val();
     });
+
+    $body.on("click", "#leaveRoom", function () {
+        api.executeCommand("hangup");
+    });
+
+    window.onbeforeunload = function () {
+        api.dispose();
+    };
 
 });
 
