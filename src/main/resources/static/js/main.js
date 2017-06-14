@@ -13,7 +13,9 @@ $(function () {
     var htmlElement = document.querySelector("#meet");
     var configOverwrite = {};
     var noSsl = false;
-    var api = new JitsiMeetExternalAPI(domain, room, width, height, htmlElement, configOverwrite, interfaceConfig, noSsl);
+    if (room) {
+        var api = new JitsiMeetExternalAPI(domain, room, width, height, htmlElement, configOverwrite, interfaceConfig, noSsl);
+    }
 
 
     var $body = $("body");
