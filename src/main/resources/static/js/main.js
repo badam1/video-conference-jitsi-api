@@ -8,13 +8,11 @@ $(function () {
 
     var domain = "meet.jit.si";
     var room = $("#room").val();
-    var width = 600;
-    var height = 800;
+    var width = 700;
+    var height = 700;
     var htmlElement = document.querySelector("#meet");
     var configOverwrite = {};
-    var interfaceConfigOverwrite = {
-        filmStripOnly: true
-    };
+    var interfaceConfigOverwrite = {};
     var noSsl = false;
     var api = new JitsiMeetExternalAPI(domain, room, width, height, htmlElement, configOverwrite, interfaceConfigOverwrite, noSsl);
 
