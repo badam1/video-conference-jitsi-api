@@ -13,15 +13,15 @@ var interfaceConfig = { // eslint-disable-line no-unused-vars
     TOOLBAR_TIMEOUT: 4000,
     DEFAULT_REMOTE_DISPLAY_NAME: "Fellow Jitster",
     DEFAULT_LOCAL_DISPLAY_NAME: "me",
-    SHOW_JITSI_WATERMARK: true,
+    SHOW_JITSI_WATERMARK: false,
     JITSI_WATERMARK_LINK: "https://jitsi.org",
     // if watermark is disabled by default, it can be shown only for guests
     SHOW_WATERMARK_FOR_GUESTS: true,
     SHOW_BRAND_WATERMARK: false,
     BRAND_WATERMARK_LINK: "",
     SHOW_POWERED_BY: false,
-    GENERATE_ROOMNAMES_ON_WELCOME_PAGE: true,
-    APP_NAME: "Jitsi Meet",
+    GENERATE_ROOMNAMES_ON_WELCOME_PAGE: false,
+    APP_NAME: "video-poc",
     LANG_DETECTION: false,    // Allow i18n to detect the system language
     INVITATION_POWERED_BY: true,
     /**
@@ -40,14 +40,14 @@ var interfaceConfig = { // eslint-disable-line no-unused-vars
      */
     TOOLBAR_BUTTONS: [
         //main toolbar
-        'microphone', 'camera', 'desktop', 'invite', 'fullscreen', 'fodeviceselection', 'hangup', // jshint ignore:line
+        'microphone', 'camera', 'desktop', 'fullscreen', // jshint ignore:line
         //extended toolbar
-        'profile', 'contacts', 'chat', 'recording', 'etherpad', 'sharedvideo', 'dialout', 'settings', 'raisehand', 'filmstrip'], // jshint ignore:line
+        'profile', 'contacts', 'chat', 'etherpad', 'sharedvideo', 'settings', 'raisehand', 'filmstrip'], // jshint ignore:line
     /**
      * Main Toolbar Buttons
      * All of them should be in TOOLBAR_BUTTONS
      */
-    MAIN_TOOLBAR_BUTTONS: ['microphone', 'camera', 'desktop', 'invite', 'fullscreen', 'fodeviceselection', 'hangup'], // jshint ignore:line
+    MAIN_TOOLBAR_BUTTONS: ['microphone', 'camera', 'desktop', 'fullscreen'], // jshint ignore:line
     SETTINGS_SECTIONS: ['language', 'devices', 'moderator'],
     // Determines how the video would fit the screen. 'both' would fit the whole
     // screen, 'height' would fit the original video height to the height of the
