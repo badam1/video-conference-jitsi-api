@@ -6,7 +6,7 @@
 
 $(function () {
 
-    var domain = "https://localhost:8443/";
+    var domain = "adam.progmasters.net";
     var room = $("#room");
     var width = 480;
     var height = 640;
