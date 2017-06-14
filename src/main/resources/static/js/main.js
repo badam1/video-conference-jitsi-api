@@ -7,7 +7,7 @@
 $(function () {
 
     var domain = "meet.jit.si";
-    var room = $("#room");
+    var room = $("#room").val();
     var width = 480;
     var height = 640;
     var htmlElement = document.querySelector("#meet");
@@ -17,6 +17,21 @@ $(function () {
     };
     var noSsl = false;
     var api = new JitsiMeetExternalAPI(domain, room, width, height, htmlElement, configOverwrite, interfaceConfigOverwrite, noSsl);
+
+
+    var $body = $("body");
+
+    if (room) {
+        $("form").remove();
+        $("#urlAndForm").append(
+            "<h4>Access url for room: " + room + "</h4> " +
+            "<input readonly='readonly' class='input form-control input-block' type='text' value='" + window.location + "'/>");
+        $body.append("<a href='/videochat/index' class='btn btn-warning right-corner'><i class='fa fa-sign-out'>Leave room</i></a>")
+    }
+
+    $("#createRoomBtn").on("click", function () {
+        var roomName = $("#roomName").val();
+    });
 
 });
 
