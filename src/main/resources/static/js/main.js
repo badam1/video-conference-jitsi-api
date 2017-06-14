@@ -6,7 +6,7 @@
 
 $(function () {
 
-    var domain = "meet.jitsi.si";
+    var domain = "meet.jit.si";
     var room = $("#room");
     var width = 480;
     var height = 640;
