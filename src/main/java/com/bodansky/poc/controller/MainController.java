@@ -6,10 +6,12 @@ package com.bodansky.poc.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.websocket.server.PathParam;
 
@@ -17,15 +19,7 @@ import javax.websocket.server.PathParam;
 @RequestMapping("/video-conference")
 public class MainController {
 
-    @Value("${signaling.server.url}")
-    private String signalingServerUrl;
-
     private static final Logger log = LoggerFactory.getLogger(MainController.class);
-
-    @ModelAttribute("signalingServerUrl")
-    public String getSignalingServerUrl() {
-        return signalingServerUrl;
-    }
 
     @GetMapping("/index")
     public String index() {
