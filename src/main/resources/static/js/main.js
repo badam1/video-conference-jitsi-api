@@ -12,9 +12,8 @@ $(function () {
     var height = 700;
     var htmlElement = document.querySelector("#meet");
     var configOverwrite = {};
-    var interfaceConfigOverwrite = interfaceConfig;
     var noSsl = false;
-    var api = new JitsiMeetExternalAPI(domain, room, width, height, htmlElement, configOverwrite, interfaceConfigOverwrite, noSsl);
+    var api = new JitsiMeetExternalAPI(domain, room, width, height, htmlElement, configOverwrite, interfaceConfig, noSsl);
 
 
     var $body = $("body");
